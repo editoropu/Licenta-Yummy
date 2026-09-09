@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Principal: verde pădure (culoarea din ecranul de login) ===== -->
+    <color name="md_primary">#2E6B4F</color>
+    <color name="md_primary_deep">#1B4433</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_primary_container">#B4F1CE</color>
+    <color name="md_on_primary_container">#002114</color>
+
+    <!-- ===== Secundar: chihlimbar cald ===== -->
+    <color name="md_secondary">#7A5B2E</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_secondary_container">#FFDFA6</color>
+    <color name="md_on_secondary_container">#281800</color>
+
+    <!-- ===== Suprafețe (light) ===== -->
+    <color name="md_background">#F6FBF6</color>
+    <color name="md_surface">#FFFFFF</color>
+    <color name="md_surface_variant">#DCE5DC</color>
+    <color name="md_on_background">#171D18</color>
+    <color name="md_on_surface">#171D18</color>
+    <color name="md_on_surface_variant">#414942</color>
+    <color name="md_outline">#717972</color>
+    <color name="md_outline_soft">#E2EAE3</color>
+
+    <!-- ===== Suprafețe (dark) ===== -->
+    <color name="md_background_dark">#0E1510</color>
+    <color name="md_surface_dark">#171D18</color>
+    <color name="md_surface_variant_dark">#2C332D</color>
+    <color name="md_on_background_dark">#DEE5DD</color>
+    <color name="md_on_surface_variant_dark">#C0C9C0</color>
+    <color name="md_outline_dark">#8B938B</color>
+    <color name="md_primary_dark">#98D5B2</color>
+
+    <!-- ===== Semantice ===== -->
+    <color name="md_error">#B3261E</color>
+    <color name="md_success">#3F6B45</color>
+    <color name="md_warning">#C77800</color>
+
+    <!-- ===== Compatibilitate: nume vechi, aliniate acum la paleta verde =====
+         Le păstrăm ca să nu se rupă layout-urile care încă le referă. -->
+    <color name="colorPrimary">#2E6B4F</color>
+    <color name="colorPrimaryDark">#1B4433</color>
+    <color name="purple_200">#B4F1CE</color>
+    <color name="purple_500">#2E6B4F</color>
+    <color name="purple_700">#1B4433</color>
+    <color name="teal_200">#B4F1CE</color>
+    <color name="teal_700">#2E6B4F</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightGray">#F6FBF6</color>
+    <color name="darkGray">#414942</color>
+    <color name="dark">#2C332D</color>
+    <color name="darker">#171D18</color>
+    <color name="red">#B3261E</color>
+    <color name="yellow">#C77800</color>
+    <color name="green">#2E6B4F</color>
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ===================== TEMA PRINCIPALĂ =====================
+         Aceleași culori pe care le folosește ecranul de login, aplicate
+         acum în toată aplicația. -->
+    <style name="AppTheme" parent="Theme.Material3.Light">
+        <item name="colorPrimary">@color/md_primary</item>
+        <item name="colorOnPrimary">@color/md_on_primary</item>
+        <item name="colorPrimaryContainer">@color/md_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/md_on_primary_container</item>
+
+        <item name="colorSecondary">@color/md_secondary</item>
+        <item name="colorOnSecondary">@color/md_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/md_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/md_on_secondary_container</item>
+
+        <item name="colorSurface">@color/md_surface</item>
+        <item name="colorOnSurface">@color/md_on_surface</item>
+        <item name="colorSurfaceVariant">@color/md_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/md_on_surface_variant</item>
+        <item name="colorOutline">@color/md_outline</item>
+        <item name="colorError">@color/md_error</item>
+
+        <item name="android:colorBackground">@color/md_background</item>
+        <item name="colorOnBackground">@color/md_on_background</item>
+        <item name="android:windowBackground">@color/md_background</item>
+
+        <!-- Bara de status: fundal deschis, iconițe întunecate -->
+        <item name="android:statusBarColor">@color/md_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/md_background</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+
+        <!-- ActionBar-ul din MainActivity, în verde ca antetul de login -->
+        <item name="actionBarTheme">@style/ThemeOverlay.Yummy.ActionBar</item>
+
+        <!-- Compatibilitate cu atribute vechi din layout-uri -->
+        <item name="colorPrimaryDark">@color/md_primary</item>
+        <item name="colorAccent">@color/md_primary</item>
+    </style>
+
+    <!-- ActionBar verde cu text alb -->
+    <style name="ThemeOverlay.Yummy.ActionBar" parent="ThemeOverlay.Material3.Dark.ActionBar">
+        <item name="colorPrimary">@color/md_primary</item>
+        <item name="colorOnPrimary">@color/md_on_primary</item>
+        <item name="colorSurface">@color/md_primary</item>
+        <item name="colorOnSurface">@color/md_on_primary</item>
+    </style>
+
+    <!-- Ecranul de detaliu rețetă: fără ActionBar, tab-uri proprii -->
+    <style name="Theme.RecipeDetail" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/md_background</item>
+        <item name="android:statusBarColor">@color/md_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ===================== COMPONENTE REUTILIZABILE =====================
+         Extrase din ecranul de login ca să arate identic peste tot. -->
+
+    <!-- Eticheta mică de deasupra unui câmp: EMAIL, PAROLĂ... -->
+    <style name="Yummy.FieldLabel" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:layout_marginBottom">7dp</item>
+    </style>
+
+    <!-- Câmp de introducere text -->
+    <style name="Yummy.Input" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textColorHint">?attr/colorOutline</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/login_input_bg</item>
+    </style>
+
+    <!-- Butonul principal, verde, colțuri 16dp -->
+    <style name="Yummy.Button" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <!-- Link text sub buton -->
+    <style name="Yummy.TextLink" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <!-- Titlul unei secțiuni din interiorul unui "sheet" -->
+    <style name="Yummy.SectionTitle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!-- Chip de filtru (starea de bază; codul schimbă fundalul la selectare) -->
+    <style name="Yummy.Chip" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:background">@drawable/filter_chip_unselected</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+</resources>

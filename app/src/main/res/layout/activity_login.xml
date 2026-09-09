@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_header_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="64dp"
+            android:paddingBottom="40dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp">
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:text="🍳"
+                android:textSize="38sp"
+                android:gravity="center"
+                android:background="@drawable/login_logo_circle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yummy"
+                android:fontFamily="@font/courgette"
+                android:textSize="42sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:layout_marginTop="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gătește mai simplu, mănâncă mai bine, în fiecare zi"
+                android:textSize="14sp"
+                android:alpha="0.8"
+                android:textColor="?attr/colorOnPrimary"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/login_sheet_bg"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:paddingTop="34dp"
+            android:paddingBottom="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bine ai revenit"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conectează-te ca să continui"
+                android:textSize="13sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="26dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="7dp" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="nume@email.com"
+                android:textColorHint="?attr/colorOutline"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="15sp"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"
+                android:background="@drawable/login_input_bg"
+                android:layout_marginBottom="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAROLĂ"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="7dp" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="••••••••"
+                android:textColorHint="?attr/colorOutline"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:background="@drawable/login_input_bg"
+                android:layout_marginBottom="30dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Conectare"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02"
+                app:cornerRadius="16dp"
+                app:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary" />
+
+            <TextView
+                android:id="@+id/goToRegisterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nu ai cont? Înregistrează-te"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginTop="22dp"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ecranul de filtre - același tipar ca login: antet cu degrade verde,
+    apoi "sheet"-ul alb rotunjit cu conținutul.
+    Rândurile de chip-uri sunt în HorizontalScrollView ca să nu fie tăiate
+    pe ecrane înguste.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_header_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ===== ANTET ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="48dp"
+            android:paddingBottom="32dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salut! 👋"
+                android:textSize="14sp"
+                android:alpha="0.85"
+                android:textColor="?attr/colorOnPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ce gătim azi?"
+                android:fontFamily="@font/courgette"
+                android:textSize="34sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- ===== FILTRE ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/login_sheet_bg"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:paddingTop="34dp"
+            android:paddingBottom="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alege-ți preferințele"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Îți arătăm doar rețetele potrivite"
+                android:textSize="13sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="26dp" />
+
+            <!-- ===== TIP DE MASĂ ===== -->
+            <TextView
+                style="@style/Yummy.FieldLabel"
+                android:text="🍽️  TIP DE MASĂ" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="22dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chipBreakfast"
+                        style="@style/Yummy.Chip"
+                        android:text="Mic dejun" />
+
+                    <TextView
+                        android:id="@+id/chipLunch"
+                        style="@style/Yummy.Chip"
+                        android:text="Prânz" />
+
+                    <TextView
+                        android:id="@+id/chipDinner"
+                        style="@style/Yummy.Chip"
+                        android:text="Cină" />
+
+                    <TextView
+                        android:id="@+id/chipDessert"
+                        style="@style/Yummy.Chip"
+                        android:text="Desert"
+                        android:layout_marginEnd="0dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- ===== DIETĂ ===== -->
+            <TextView
+                style="@style/Yummy.FieldLabel"
+                android:text="🌱  DIETĂ" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="22dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chipAnyDiet"
+                        style="@style/Yummy.Chip"
+                        android:text="Oricare" />
+
+                    <TextView
+                        android:id="@+id/chipVegan"
+                        style="@style/Yummy.Chip"
+                        android:text="Vegan" />
+
+                    <TextView
+                        android:id="@+id/chipVegetarian"
+                        style="@style/Yummy.Chip"
+                        android:text="Vegetarian" />
+
+                    <TextView
+                        android:id="@+id/chipGlutenFree"
+                        style="@style/Yummy.Chip"
+                        android:text="Fără gluten"
+                        android:layout_marginEnd="0dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- ===== TIMP DE PREPARARE ===== -->
+            <TextView
+                style="@style/Yummy.FieldLabel"
+                android:text="⏱️  TIMP DE PREPARARE" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chipAnyTime"
+                        style="@style/Yummy.Chip"
+                        android:text="Oricât" />
+
+                    <TextView
+                        android:id="@+id/chipUnder30"
+                        style="@style/Yummy.Chip"
+                        android:text="Sub 30 min" />
+
+                    <TextView
+                        android:id="@+id/chip30to60"
+                        style="@style/Yummy.Chip"
+                        android:text="30-60 min"
+                        android:layout_marginEnd="0dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/showRecipesButton"
+                style="@style/Yummy.Button"
+                android:text="Arată rețetele" />
+
+            <TextView
+                android:id="@+id/browseAllText"
+                style="@style/Yummy.TextLink"
+                android:text="sau vezi toate rețetele"
+                android:layout_marginTop="18dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
