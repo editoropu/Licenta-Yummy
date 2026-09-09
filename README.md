@@ -1,0 +1,2 @@
+# Toropu_Eduard_Aplicatie_Practica_Yummy_Licenta
+
